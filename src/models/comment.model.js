@@ -1,31 +1,33 @@
 const mongoose = require('mongoose');
-
+const { contentSchema } = require('./content.model');
 // Define the Comment Schema
 const commentSchema = new mongoose.Schema({
   content: {
     type: contentSchema,
-    required: true
+    required: true,
   },
   author: {
     type: String,
-    required: true
+    required: true,
   },
   timestamp: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   upvotes: {
     type: Number,
-    default: 0
+    default: 0,
   },
   downvotes: {
     type: Number,
-    default: 0
+    default: 0,
   },
-  replies: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Comment' // Reference to sub-comments
-  }]
+  replies: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Comment', // Reference to sub-comments
+    },
+  ],
 });
 
 // Create the Comment model

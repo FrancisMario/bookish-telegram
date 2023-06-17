@@ -22,5 +22,5 @@ const updateContent = {
 
 module.exports = {
   createContent,
-  updateContent
+  updateContent,
 };
