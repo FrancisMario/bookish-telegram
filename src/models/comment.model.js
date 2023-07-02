@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { contentSchema } = require('./content.model');
+
 // Define the Comment Schema
 const commentSchema = new mongoose.Schema({
   content: {

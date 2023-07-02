@@ -24,5 +24,5 @@ const contentSchema = new mongoose.Schema({
 // Create the Comment model
 const Content = mongoose.model('Content', contentSchema);
 
-module.exports = contentSchema;
-module.exports = Content;
+module.exports.contentSchema = contentSchema;
+module.exports.Content = Content;
